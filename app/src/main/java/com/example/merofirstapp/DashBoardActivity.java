@@ -22,6 +22,7 @@ public class DashBoardActivity extends AppCompatActivity {
         initToolbar();
         findViews();
         setUpViewPager();
+        // sync tab layout with view pager
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -32,7 +33,6 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
     private void initToolbar(){
-        toolbar = findViewById(R.id.toolbar);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("View Pager ");
