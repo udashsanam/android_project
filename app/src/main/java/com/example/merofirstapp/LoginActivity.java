@@ -1,12 +1,22 @@
 package com.example.merofirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private EditText editUsername, editPassword;
+    private AppCompatButton   signUpButton, signInButton;
+//    private CheckBox chkFootBall, chkvolleyBall,  chkTennis, chkLudo;
 //    activity life cycle
 //    1. onCreate  when activity crate
 //    2. onStart   when activity launched
@@ -20,9 +30,67 @@ public class LoginActivity extends AppCompatActivity {
 //        link between layout and activity file
         setContentView(R.layout.layout_login);
         initToolBar();
+        findView();
 
     }
 
+    private void findView(){
+
+        editUsername = findViewById(R.id.username);
+        editPassword = findViewById(R.id.password);
+        signUpButton = findViewById(R.id.sign_up_button);
+        signInButton = findViewById(R.id.sign_in_button);
+
+//        chkFootBall = findViewById(R.id.chkfootball);
+//        chkTennis = findViewById(R.id.chktennis);
+//        chkLudo = findViewById(R.id.chkludo);
+//        chkvolleyBall = findViewById(R.id.chkvolleyball);
+//        chkFootBall.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//
+//            }
+//        });
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+//            String hobbies = "";
+            @Override
+            public void onClick(View view) {
+//                if(chkFootBall.isChecked()){
+//                    hobbies = hobbies + " "+ chkFootBall.getText().toString();
+//                } else if(chkLudo.isChecked()) {
+//                    hobbies = hobbies + " " + chkLudo.getText().toString();
+//                } else if(chkTennis.isChecked()) {
+//                    hobbies = hobbies + " " + chkTennis.getText().toString();
+//                } else if(chkvolleyBall.isChecked()) {
+//                    hobbies = hobbies+ " " + chkvolleyBall.getText().toString();
+
+//                }
+
+                if(view.getId()==R.id.sign_up_button){
+                    Intent i = new Intent(LoginActivity.this, SignUpActivity.class);
+                    startActivity(i);
+                }
+            }
+
+
+        });
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view.getId() == R.id.sign_in_button){
+                    String username = editUsername.getText().toString();
+                    String password = editPassword.getText().toString();
+                    Log.d("Data", username + " hello " + password);
+                }
+
+            }
+        });
+
+
+
+    }
 
     // code for the tool bar
     private void initToolBar(){
