@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -79,10 +80,18 @@ public class LoginActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String username = editUsername.getText().toString();
+                String password = editPassword.getText().toString();
                 if(view.getId() == R.id.sign_in_button){
-                    String username = editUsername.getText().toString();
-                    String password = editPassword.getText().toString();
+
                     Log.d("Data", username + " hello " + password);
+                }
+
+                if(!username.isEmpty() && !password.isEmpty()) {
+                    Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(LoginActivity.this, "Username and Password cannot be empty", Toast.LENGTH_SHORT).show();
                 }
 
             }
