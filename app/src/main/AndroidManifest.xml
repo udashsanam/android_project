@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeroFirstApp">
+        <activity android:name=".CategoryActivity"></activity>
         <activity android:name=".DashBoardActivity">
+
             <!-- intent filter tell activity type -->
             <intent-filter>
 
@@ -19,17 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"></activity> <!-- here are the activity are define which are created by use -->
+        <activity android:name=".SignUpActivity" /> <!-- here are the activity are define which are created by use -->
         <activity android:name=".LoginActivity">
 
-<!--            &lt;!&ndash; intent filter tell activity type &ndash;&gt;-->
-<!--            <intent-filter>-->
+            <!-- &lt;!&ndash; intent filter tell activity type &ndash;&gt; -->
+            <!-- <intent-filter> -->
 
-<!--                &lt;!&ndash; this will tell that it is main activity &ndash;&gt;-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- &lt;!&ndash; this will tell that it is main activity &ndash;&gt; -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 
