@@ -88,7 +88,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 if(!username.isEmpty() && !password.isEmpty()) {
+                    // this object will navigate one activity ot another activity
                     Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+                    intent.putExtra("Username", username);
+                    intent.putExtra("Password", password);
                     startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "Username and Password cannot be empty", Toast.LENGTH_SHORT).show();

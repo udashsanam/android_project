@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -15,6 +16,8 @@ public class DashBoardActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private Toolbar toolbar;
     private ViewPageAdapter viewPageAdder;
+    private String usernameIntent;
+    private String passwordIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,10 @@ public class DashBoardActivity extends AppCompatActivity {
         initToolbar();
         findViews();
         setUpViewPager();
+        usernameIntent = getIntent().getStringExtra("Username");
+        passwordIntent = getIntent().getStringExtra("Password");
+
+        Toast.makeText(DashBoardActivity.this, "username:" + usernameIntent + "password: "+ passwordIntent, Toast.LENGTH_SHORT);
         // sync tab layout with view pager
         tabLayout.setupWithViewPager(viewPager);
     }

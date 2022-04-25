@@ -8,17 +8,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
     private CheckBox chkFootBall, chkvolleyBall,  chkTennis, chkLudo;
     private Button signUpButton1;
     private Toolbar toolbar;
+    private EditText  phoneNumber, firstName, lastName, address, email, username, password;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up_layout);
+
         initToolBar();
         signUpView();
 
@@ -33,6 +39,14 @@ public class SignUpActivity extends AppCompatActivity {
         chkTennis = findViewById(R.id.chktennis);
         chkLudo = findViewById(R.id.chkludo);
         chkvolleyBall = findViewById(R.id.chkvolleyball);
+        phoneNumber = findViewById(R.id.phonenumber);
+        firstName = findViewById(R.id.firstname);
+        lastName = findViewById(R.id.lastname);
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        address = findViewById(R.id.address);
+        email = findViewById(R.id.email);
+
 
         signUpButton1.setOnClickListener(new View.OnClickListener() {
             String hobbies = "";
