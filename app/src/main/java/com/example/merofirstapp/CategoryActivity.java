@@ -34,6 +34,7 @@ public class CategoryActivity extends AppCompatActivity {
     //
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // getting the item from the tool bar
         if(item.getItemId() == android.R.id.home){
             // this will remove the previous fragment and add new in the frame layout
             getSupportFragmentManager().beginTransaction().replace(R.id.frame1, new HomeFragment()).commit();

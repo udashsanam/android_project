@@ -37,6 +37,8 @@ public class DashboardFragment extends Fragment {
         // inflate the layout for this fragment
         // this main view is used to find the component of the layout present of the inflater
         mainView = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        // here we have to call function related to the view
+        findView();
         return mainView;
     }
 

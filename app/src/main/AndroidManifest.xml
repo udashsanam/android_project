@@ -9,39 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeroFirstApp">
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".CategoryActivity">
-<!--            <intent-filter>-->
 
-<!--                &lt;!&ndash; this will tell that it is main activity &ndash;&gt;-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+
+            <!-- &lt;!&ndash; this will tell that it is main activity &ndash;&gt; -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".DashBoardActivity">
 
             <!-- intent filter tell activity type -->
-<!--            <intent-filter>-->
+            <!-- <intent-filter> -->
 
-<!--                &lt;!&ndash; this will tell that it is main activity &ndash;&gt;-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- &lt;!&ndash; this will tell that it is main activity &ndash;&gt; -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".SignUpActivity" /> <!-- here are the activity are define which are created by use -->
         <activity android:name=".LoginActivity">
 
-             <!-- intent filter tell activity type -->
-             <intent-filter>
+            <!-- intent filter tell activity type -->
+            <intent-filter>
 
+                <!-- this will tell that it is main activity -->
+                <action android:name="android.intent.action.MAIN" />
 
-             <!-- this will tell that it is main activity -->
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
