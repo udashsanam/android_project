@@ -51,6 +51,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
     public void setUpViewPager(){
 
+        // adding fragment of the view pager of the
         viewPageAdder = new ViewPageAdapter(getSupportFragmentManager());
         viewPageAdder.addFragment(new HomeFragment(), "Home");
         viewPageAdder.addFragment(new DashboardFragment(), "Dashboard");
