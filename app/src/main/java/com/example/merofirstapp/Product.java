@@ -1,5 +1,8 @@
 package com.example.merofirstapp;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Product {
 
     private String title;
@@ -39,3 +42,5 @@ public class Product {
         this.price = price;
     }
 }
+
+

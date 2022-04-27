@@ -17,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private EditText editUsername, editPassword;
     private AppCompatButton   signUpButton, signInButton;
+
 //    private CheckBox chkFootBall, chkvolleyBall,  chkTennis, chkLudo;
 //    activity life cycle
 //    1. onCreate  when activity crate
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.layout_login);
         initToolBar();
         findView();
+
 
     }
 

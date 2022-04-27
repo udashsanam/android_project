@@ -31,6 +31,7 @@ public class DashBoardActivity extends AppCompatActivity {
         usernameIntent = getIntent().getStringExtra("Username");
         passwordIntent = getIntent().getStringExtra("Password");
         Log.d("Data", usernameIntent + passwordIntent);
+//        Log.d("Object", listView.toString());
         Toast.makeText(DashBoardActivity.this, "username:" + usernameIntent + "password: "+ passwordIntent, Toast.LENGTH_SHORT);
         // sync tab layout with view pager
         tabLayout.setupWithViewPager(viewPager);
