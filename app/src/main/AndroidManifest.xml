@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeroFirstApp">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".CategoryActivity">
+        <activity android:name=".HomeActivity" android:exported="false"></activity>
+        <activity android:name=".CategoryActivity" android:exported="false">
 
             <!-- <intent-filter> -->
 
@@ -22,7 +22,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".DashBoardActivity">
+        <activity android:name=".DashBoardActivity" android:exported="false">
 
             <!-- intent filter tell activity type -->
             <!-- <intent-filter> -->
@@ -35,8 +35,9 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".SignUpActivity" /> <!-- here are the activity are define which are created by use -->
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SignUpActivity"  android:exported="false"/> <!-- here are the activity are define which are created by use -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
 
             <!-- intent filter tell activity type -->
             <intent-filter>

@@ -1,11 +1,14 @@
 package com.example.merofirstapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,7 +35,7 @@ public class DashBoardActivity extends AppCompatActivity {
         passwordIntent = getIntent().getStringExtra("Password");
         Log.d("Data", usernameIntent + passwordIntent);
 //        Log.d("Object", listView.toString());
-        Toast.makeText(DashBoardActivity.this, "username:" + usernameIntent + "password: "+ passwordIntent, Toast.LENGTH_SHORT);
+        Toast.makeText(DashBoardActivity.this, "username:" + usernameIntent + "password: "+ passwordIntent, Toast.LENGTH_LONG).show();
         // sync tab layout with view pager
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -42,6 +45,7 @@ public class DashBoardActivity extends AppCompatActivity {
             tabLayout = findViewById(R.id.tab_layout);
             viewPager = findViewById(R.id.view_pager);
             listView = findViewById(R.id.listView);
+
     }
 
     private void initToolbar(){
@@ -52,6 +56,16 @@ public class DashBoardActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.home){
+
+        }
+
+        return true;
     }
 
     public void setUpViewPager(){

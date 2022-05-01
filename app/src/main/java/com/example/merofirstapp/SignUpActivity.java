@@ -49,6 +49,13 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         signUpButton1.setOnClickListener(new View.OnClickListener() {
+            String phone1 = phoneNumber.getText().toString();
+            String firstName1 = firstName.getText().toString();
+            String lastName1 = lastName.getText().toString();
+            String username1 = username.getText().toString();
+            String password1 = password.getText().toString();
+            String address1 = address.getText().toString();
+            String email1 = email.getText().toString();
             String hobbies = "";
             @Override
             public void onClick(View view) {
@@ -68,7 +75,15 @@ public class SignUpActivity extends AppCompatActivity {
                 if(view.getId() == R.id.sign_up_button){
 
                     Log.d("Data","hobbies are   " + hobbies);
+                    if(phone1.isEmpty() || firstName1.isEmpty() || lastName1.isEmpty() || username1.isEmpty() || password1.isEmpty() || address1.isEmpty() || email1.isEmpty()) {
+//                        Toast.makeText(this, "Required field is empty", Toast.LENGTH_LONG);
+                        Toast.makeText(SignUpActivity.this, " Required field is empty ", Toast.LENGTH_LONG).show();
+                    }
+
+
                 }
+
+
 
             }
         });

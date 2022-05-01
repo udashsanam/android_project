@@ -16,68 +16,16 @@
             android:orientation="vertical"
             android:background="@drawable/sign_up_background">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#3C3F41"
-                app:title="@string/app_name"
-                app:titleTextColor="@color/black" />
+           <TextView
+               android:id="@+id/title"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:text="Home Fragment"/>
 
 
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/world"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:padding="10dp"
-                android:hint="@string/username"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:inputType="text"
-                android:background="@drawable/edit_background"
-                android:drawableStart="@drawable/ic_baseline_account_circle_24"
-                android:id="@+id/username"
-                />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edit_background"
-                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                android:textAlignment="center" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="@string/text_login"
-                android:background="@drawable/login_button"
-                android:textAllCaps="false"
-                android:textSize="18dp"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_up_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_up"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/new_sign_up_button"
-                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 

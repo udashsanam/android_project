@@ -92,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(!username.isEmpty() && !password.isEmpty()) {
                     // this object will navigate one activity ot another activity
                     Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+                    // putting data into intent objec
                     intent.putExtra("Username", username);
                     intent.putExtra("Password", password);
                     startActivity(intent);

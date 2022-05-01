@@ -9,12 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 
 public class DashboardFragment extends Fragment {
 
     private  View mainView;
-    private CheckBox chkFootball;
+    private TextView title;
 
 
 
@@ -44,6 +45,8 @@ public class DashboardFragment extends Fragment {
 
     private  void findView() {
         // mapping the  view of the fragment_dashboard to chkfootball
-        chkFootball = mainView.findViewById(R.id.chkfootball);
+        title = mainView.findViewById(R.id.title);
+        title.setText("Hello I am Dashboard fragment layout ");
+
     }
 }
