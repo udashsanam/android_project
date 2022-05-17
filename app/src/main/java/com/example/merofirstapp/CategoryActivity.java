@@ -6,15 +6,24 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private ListView listView;
+    private ListAdapter listAdapter;
+    private List<Product> productList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         initToolBar();
+        setData();
+        findViews();
         getSupportFragmentManager().beginTransaction().add(R.id.frame1, new DashboardFragment()).commit();
 
     }
@@ -40,5 +49,47 @@ public class CategoryActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.frame1, new HomeFragment()).commit();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void findViews(){
+
+        listView = findViewById(R.id.listView);
+        // this means object of this class i.e activity or fragment
+        listAdapter = new ListAdapter(productList, this);
+
+        listView.setAdapter(listAdapter);
+    }
+
+    private void setData(){
+        Product p1 = new Product();
+        Product p2 = new Product();
+        Product p3 = new Product();
+        Product p4 = new Product();
+        p1.setTitle("Iphone 6");
+        p2.setTitle("Iphone 7");
+        p3.setTitle("Iphone 8");
+        p4.setTitle("Iphone 9");
+        p1.setDescription("this is iphone 6 ");
+        p2.setDescription("this is iphone 7 ");
+        p3.setDescription("this is iphone 8 ");
+        p4.setDescription("this is iphone 9 ");
+        p1.setPrice("234");
+        p2.setPrice("234");
+        p3.setPrice("234");
+        p4.setPrice("234");
+        p1.setUnit("45");
+        p2.setUnit("46");
+        p3.setUnit("56");
+        p4.setUnit("467");
+
+
+
+        productList.add(p1);
+        productList.add(p2);
+        productList.add(p3);
+        productList.add(p4);
+
+
+
     }
 }

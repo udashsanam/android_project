@@ -12,15 +12,15 @@
         <activity android:name=".HomeActivity" android:exported="false"></activity>
         <activity android:name=".CategoryActivity" android:exported="false">
 
-            <!-- <intent-filter> -->
+             <intent-filter>
 
 
-            <!-- &lt;!&ndash; this will tell that it is main activity &ndash;&gt; -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+             <!-- this will tell that it is main activity -->
+             <action android:name="android.intent.action.MAIN" />
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity android:name=".DashBoardActivity" android:exported="false">
 
@@ -39,14 +39,14 @@
         <activity android:name=".LoginActivity"
             android:exported="true">
 
-            <!-- intent filter tell activity type -->
-            <intent-filter>
+<!--            &lt;!&ndash; intent filter tell activity type &ndash;&gt;-->
+<!--            <intent-filter>-->
 
-                <!-- this will tell that it is main activity -->
-                <action android:name="android.intent.action.MAIN" />
+<!--                &lt;!&ndash; this will tell that it is main activity &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 
