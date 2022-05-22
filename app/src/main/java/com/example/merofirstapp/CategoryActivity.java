@@ -82,8 +82,6 @@ public class CategoryActivity extends AppCompatActivity {
         p3.setUnit("56");
         p4.setUnit("467");
 
-
-
         productList.add(p1);
         productList.add(p2);
         productList.add(p3);
