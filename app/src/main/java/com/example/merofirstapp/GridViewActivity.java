@@ -6,21 +6,22 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryActivity extends AppCompatActivity {
+public class GridViewActivity extends AppCompatActivity {
     private Toolbar toolbar;
-    private ListView listView;
+    private GridView gridView;
     private ListAdapter listAdapter;
     private List<Product> productList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
+        setContentView(R.layout.activity_grid_view);
         initToolBar();
         setData();
         findViews();
@@ -41,23 +42,23 @@ public class CategoryActivity extends AppCompatActivity {
 
     // action for the tool bar items
     //
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        // getting the item from the tool bar
-        if(item.getItemId() == android.R.id.home){
-            // this will remove the previous fragment and add new in the frame layout
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame1, new HomeFragment()).commit();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        // getting the item from the tool bar
+//        if(item.getItemId() == android.R.id.home){
+//            // this will remove the previous fragment and add new in the frame layout
+//            getSupportFragmentManager().beginTransaction().replace(R.id.frame1, new HomeFragment()).commit();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     public void findViews(){
 
-        listView = findViewById(R.id.listView);
+        gridView = findViewById(R.id.grid_view);
         // this means object of this class i.e activity or fragment
         listAdapter = new ListAdapter(productList, this);
 
-        listView.setAdapter(listAdapter);
+        gridView.setAdapter(listAdapter);
     }
 
     private void setData(){
